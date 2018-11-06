@@ -20,6 +20,10 @@ def assign_rooms(names)
 end
 
 def printer(names)
-  puts batch_badge_creator(names)
-  puts assign_rooms(names)
+  each.batch_badge_creator(names) do |name|
+    puts name
+  end
+  each.assign_rooms(names) do |name|
+    puts name
+  end
 end
